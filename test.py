@@ -66,3 +66,4 @@ rawPoints.to_rel()
 print('상대좌표로 변경')
 for i in rawPoints.points:
     print(f"{rawPoints.points.index(i)+1}번째 포인트: {i}")
+OUT = rawPoints.to_dynamo_points()
