@@ -39,4 +39,11 @@ class PointArray:
         self.points = returnList
         return self
     # 절대좌표값을 첫번째 인수를 기준으로 상대 좌표롤 만듬 
-        
+    def to_rel(self):
+        ox = self.points[0].x
+        oy = self.points[0].y
+        oz = self.points[0].z
+        for p in self.points:
+            p.x = p.x - ox
+            p.y = p.y - oy
+            p.z = p.z - oz
