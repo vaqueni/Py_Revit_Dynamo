@@ -1,3 +1,7 @@
+import clr
+clr.AddReference('ProtoGeometry')
+from Autodesk.DesignScript.Geometry import Point
+
 class LinPoint:
     def __init__(self, lin='', x=0, y=0, z=0):
         self.lin = lin  # 측점
@@ -47,3 +51,6 @@ class PointArray:
             p.x = p.x - ox
             p.y = p.y - oy
             p.z = p.z - oz
+    # 다이나모 Point 객체로 변경
+    def to_dynamo_points(self):
+        return [Point.ByCoordinates(p.x, p.y, p.z) for p in self.points]
