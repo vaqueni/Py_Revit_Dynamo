@@ -26,7 +26,7 @@ class PointArray:
         else:
             raise TypeError("Only LinPoint instances can be added.")
     # 시작점과 끝점을 입력하면 해당 값에서 슬라이스된 array를 출력
-    def pointsSlide(self, start, end):
+    def points_slide(self, start, end):
         returnList = []
         for i in self.points:
             if i.lin<start:
@@ -36,20 +36,7 @@ class PointArray:
                 returnList.append(i)
             else:
                 continue
-        self = returnList
+        self.points = returnList
         return self
     # 절대좌표값을 첫번째 인수를 기준으로 상대 좌표롤 만듬 
-    def absToRel(self):
-        if isinstance(self, PointArray):
-            if len(self.points)>0:
-                origin = self.points[0]
-                for i in self.points:
-                    if self.points.index(i) < len(self.points)-1:
-                        i.x -= origin.x
-                        i.y -= origin.y
-                        i.z -= origin.z
-                    else: continue
-            else:
-                print("좌표의 갯수는 1개 이상이어야 합니다.")
-        else:
-            print("잘못된 입력값, Point Array 객체를 받습니다.")
+        

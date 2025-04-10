@@ -1,13 +1,25 @@
 import pandas as pd
 import sys
+import tempfile
 import os
 
-# File Path 노드에서 받은 .py 파일 경로
-main_script_path = IN[0]
-pointRead_dir = os.path.dirname(main_script_path)
-sys.path.append(pointRead_dir)
+# pointRead.py 문자열 저장
+pointread_code = IN[0]
 
+temp_dir = tempfile.gettempdir()
+pointread_path = os.path.join(temp_dir, "pointRead.py")
+with open(pointread_path, "w", encoding="utf-8") as f:
+    f.write(pointread_code)
 
+# 저장된 경로 import
+if temp_dir not in sys.path:
+    sys.path.append(temp_dir)
+
+import importlib
+import pointRead
+importlib.reload(pointRead)  # 매번 새로 불러오기
+
+# pointRead에서 불러오기
 from pointRead import *
 
 # 파일 읽기
@@ -36,7 +48,7 @@ start = IN[2]
 end = IN[3]
 
 
-rawPoints.pointsSlide(start,end)
+rawPoints.points_slide(start,end)
 
 for i in rawPoints.points:
     print(f"{rawPoints.points.index(i)+1}번째 포인트:")
@@ -48,8 +60,9 @@ print("상대좌표로 변경")
 print("---------------------------------------")
 
 # absToRel(newPointList)
-rawPoints.absToRel()
+print("함수호출")
+rawPoints.abs_to_rel()
+
 for i in rawPoints.points:
-    print(f"{rawPoints.points.index(i)+1}번째 포인트:")
-    print(i)
-    print()
+    print(f"{rawPoints.points.index(i)+1}번째 포인트: {i}")
+

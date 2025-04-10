@@ -1,0 +1,472 @@
+{
+  "Uuid": "f15e7735-cf2d-4132-b113-88bbe93e2a47",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "test",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "a0fcf66dd448446da9a74e3ce4dd6767",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "24542b6ff32e49caa5b9681dc88ebe83",
+          "Name": "file",
+          "Description": "File object to read text from\n\nvar",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "f716631fbcad4072848e4ece047ea6d7",
+          "Name": "string",
+          "Description": "Contents of the text file.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DSCore.IO.FileSystem.ReadText@var",
+      "Replication": "Auto",
+      "Description": "Reads a text file and returns the contents as a string.\n\nFileSystem.ReadText (file: var): string"
+    },
+    {
+      "ConcreteType": "PythonNodeModels.PythonStringNode, PythonNodeModels",
+      "Engine": "CPython3",
+      "VariableInputPorts": true,
+      "Id": "74e4df8d605d46a1b96071edd1f772f3",
+      "NodeType": "ExtensionNode",
+      "Inputs": [
+        {
+          "Id": "be1f910f8b0d41dda798deef97a2911a",
+          "Name": "script",
+          "Description": "Python script to run.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c95c02aa0a2547cb9e9b97c07cfaf2ff",
+          "Name": "IN[0]",
+          "Description": "Input #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e5a815808e574be4b2faa0ca45e8f365",
+          "Name": "IN[1]",
+          "Description": "Input #1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f762db067a0e4c06ba4e6a4cb0ced886",
+          "Name": "IN[2]",
+          "Description": "Input #2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "078945ab439c4fe8943359074a16350e",
+          "Name": "IN[3]",
+          "Description": "Input #3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e806f545de924e96afea4065a45af129",
+          "Name": "OUT",
+          "Description": "Result of the python script",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Runs a Python script from a string."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.Filename, CoreNodeModels",
+      "Id": "df59e49cc15b4358af69c63b62506c5c",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "2a7b9787c9444a3095e0c4cf6495c728",
+          "Name": "",
+          "Description": "File Path",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows you to select a file on the system and returns its file path",
+      "HintPath": "C:\\Users\\user\\Desktop\\개인 제출용 서류\\공부\\새 폴더\\Py_Revit_Dynamo\\test.py",
+      "InputValue": "개인 제출용 서류\\공부\\새 폴더\\Py_Revit_Dynamo\\test.py"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.Filename, CoreNodeModels",
+      "Id": "fc6079dd57724c5198c8453e0ca50c2e",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "7a909b6a6c054e7983b646a94eca1bc8",
+          "Name": "",
+          "Description": "File Path",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows you to select a file on the system and returns its file path",
+      "HintPath": "C:\\Users\\user\\Desktop\\개인 제출용 서류\\공부\\새 폴더\\Py_Revit_Dynamo\\data\\Civil Report.csv",
+      "InputValue": "C:\\Users\\user\\Desktop\\개인 제출용 서류\\공부\\새 폴더\\Py_Revit_Dynamo\\data\\Civil Report.csv"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "Id": "b87ab2071edd4346a213b971a7320ad7",
+      "NodeType": "CodeBlockNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "da6d82a83c1541ad9fa062b727112a82",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2645f27f1f44446fbf30c65d93ef0a80",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly",
+      "Code": "30;\n190;"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "WatchWidth": 50.0,
+      "WatchHeight": 38.0,
+      "Id": "32b5c92fd1ed43ba94c81116c3199f52",
+      "NodeType": "ExtensionNode",
+      "Inputs": [
+        {
+          "Id": "8147405c0332481096df362aa41fc76a",
+          "Name": "",
+          "Description": "Node to show output from",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "cd60dc26e9c0478b8bb59d1b314daac7",
+          "Name": "",
+          "Description": "Node output",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualizes a node's output"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "WatchWidth": 50.0,
+      "WatchHeight": 200.0,
+      "Id": "8c478add36fd4e8fbd2dc3329a0c183e",
+      "NodeType": "ExtensionNode",
+      "Inputs": [
+        {
+          "Id": "373eec10345d4e7aa7c8b539598f93b3",
+          "Name": "",
+          "Description": "Node to show output from",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "bd8930f18fca430096351937ab1e8c4b",
+          "Name": "",
+          "Description": "Node output",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualizes a node's output"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.Filename, CoreNodeModels",
+      "Id": "0e1d8dd9ef504b279fed12527b990451",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "43bd366ed89741a6a0397b2fa64c4e38",
+          "Name": "",
+          "Description": "File Path",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows you to select a file on the system and returns its file path",
+      "HintPath": "C:\\Users\\user\\Desktop\\개인 제출용 서류\\공부\\새 폴더\\Py_Revit_Dynamo\\pointRead.py",
+      "InputValue": "개인 제출용 서류\\공부\\새 폴더\\Py_Revit_Dynamo\\pointRead.py"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "f716631fbcad4072848e4ece047ea6d7",
+      "End": "be1f910f8b0d41dda798deef97a2911a",
+      "Id": "5d4228cc4a694cf5b0a5fbbc19cbbfbf",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "e806f545de924e96afea4065a45af129",
+      "End": "8147405c0332481096df362aa41fc76a",
+      "Id": "213c0a61c4bd468aa547574e63f16326",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "e806f545de924e96afea4065a45af129",
+      "End": "373eec10345d4e7aa7c8b539598f93b3",
+      "Id": "fe5bec49a54f4d92a78e130a30b80922",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "2a7b9787c9444a3095e0c4cf6495c728",
+      "End": "24542b6ff32e49caa5b9681dc88ebe83",
+      "Id": "aa3221d6a8da4ad7a41a24ccd017d35f",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "7a909b6a6c054e7983b646a94eca1bc8",
+      "End": "e5a815808e574be4b2faa0ca45e8f365",
+      "Id": "257c0756f21e401caab36d86b46689ec",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "da6d82a83c1541ad9fa062b727112a82",
+      "End": "f762db067a0e4c06ba4e6a4cb0ced886",
+      "Id": "fc4ca8a4f9c64cbfada370bda6f260a8",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "2645f27f1f44446fbf30c65d93ef0a80",
+      "End": "078945ab439c4fe8943359074a16350e",
+      "Id": "1bb1c9c875d447638315fc3404ebda82",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "43bd366ed89741a6a0397b2fa64c4e38",
+      "End": "c95c02aa0a2547cb9e9b97c07cfaf2ff",
+      "Id": "f9fdd29c270144adac5ae8ae46fc9a37",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [
+    {
+      "Name": "test.py",
+      "ReferenceType": "External",
+      "Nodes": [
+        "df59e49cc15b4358af69c63b62506c5c"
+      ]
+    },
+    {
+      "Name": "Civil Report.csv",
+      "ReferenceType": "External",
+      "Nodes": [
+        "fc6079dd57724c5198c8453e0ca50c2e"
+      ]
+    },
+    {
+      "Name": "pointRead.py",
+      "ReferenceType": "External",
+      "Nodes": [
+        "0e1d8dd9ef504b279fed12527b990451"
+      ]
+    }
+  ],
+  "EnableLegacyPolyCurveBehavior": true,
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "3.3",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "8.2",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "3.3.0.6316",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "_Background Preview",
+      "EyeX": -334.0780029296875,
+      "EyeY": 601.4806823730469,
+      "EyeZ": -5.139223098754883,
+      "LookX": 329.2987976074219,
+      "LookY": -474.6224670410156,
+      "LookZ": -159.26571655273438,
+      "UpX": 0.5786619782447815,
+      "UpY": 0.7660443782806396,
+      "UpZ": -0.27986854314804077
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Id": "a0fcf66dd448446da9a74e3ce4dd6767",
+        "Name": "FileSystem.ReadText",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 244.04054393109288,
+        "Y": -49.71778428630989
+      },
+      {
+        "Id": "74e4df8d605d46a1b96071edd1f772f3",
+        "Name": "Python Script From String",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 943.169063452176,
+        "Y": 403.0222317155748
+      },
+      {
+        "Id": "df59e49cc15b4358af69c63b62506c5c",
+        "Name": "File Path",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -449.05556054330407,
+        "Y": -53.2978852694298
+      },
+      {
+        "Id": "fc6079dd57724c5198c8453e0ca50c2e",
+        "Name": "csv 파일",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -101.44078351448388,
+        "Y": 464.005820453493
+      },
+      {
+        "Id": "b87ab2071edd4346a213b971a7320ad7",
+        "Name": "Code Block",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 407.6465485925887,
+        "Y": 636.7607219415329
+      },
+      {
+        "Id": "32b5c92fd1ed43ba94c81116c3199f52",
+        "Name": "Watch",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1477.2113142871688,
+        "Y": 458.6187992473973
+      },
+      {
+        "Id": "8c478add36fd4e8fbd2dc3329a0c183e",
+        "Name": "Watch",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1276.8896603850221,
+        "Y": 553.0989533006361
+      },
+      {
+        "Id": "0e1d8dd9ef504b279fed12527b990451",
+        "Name": "File Path",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -238.34079685591735,
+        "Y": 287.49130940447293
+      }
+    ],
+    "Annotations": [],
+    "X": 229.5415259476581,
+    "Y": 121.38209817240045,
+    "Zoom": 0.6999206210500313
+  }
+}
