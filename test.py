@@ -44,11 +44,6 @@ for _, row in filtered_df.iterrows():
 # start = int(input("측점 시작값 입력: "))
 # end   = int(input("측점 끝값 입력: "))
 
-start = IN[2]
-end = IN[3]
-
-
-rawPoints.points_slide(start,end)
 
 for i in rawPoints.points:
     print(f"{rawPoints.points.index(i)+1}번째 포인트:")
@@ -63,7 +58,10 @@ print("---------------------------------------")
 print("함수호출")
 rawPoints.to_rel()
 
-print('상대좌표로 변경')
-for i in rawPoints.points:
-    print(f"{rawPoints.points.index(i)+1}번째 포인트: {i}")
+
+start = IN[2]
+end = IN[3]
+
+rawPoints.points_slide(start,end)
+
 OUT = rawPoints.to_dynamo_points()
