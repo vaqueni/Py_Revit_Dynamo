@@ -64,4 +64,12 @@ end = IN[3]
 
 rawPoints.points_slide(start,end)
 
+
 OUT = rawPoints.to_dynamo_points()
+# OUT = rawPoints.to_dynamo_points()
+
+
+
+# print("Linear Points:", linear)
+# print("Types:", [type(p) for p in linear])
+# OUT = PolyCurve.ByPoints(linear,False)

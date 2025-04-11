@@ -1,6 +1,6 @@
 import clr
 clr.AddReference('ProtoGeometry')
-from Autodesk.DesignScript.Geometry import Point
+from Autodesk.DesignScript.Geometry import Point, PolyCurve
 
 class LinPoint:
     def __init__(self, lin='', x=0, y=0, z=0):
