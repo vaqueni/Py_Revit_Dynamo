@@ -30,8 +30,16 @@ class PointArray:
         else:
             raise TypeError("Only LinPoint instances can be added.")
     # 시작점과 끝점을 입력하면 해당 값에서 슬라이스된 array를 출력
+    # start에 -1 입력시 처음부터, end = -1 면 끝까지
     def points_slide(self, start, end):
         returnList = []
+        if end == -1:
+            for i in self.points:
+                if start<=i.lin:
+                    returnList.append(i)
+                else: continue
+            return returnList
+
         for i in self.points:
             if i.lin<start:
                 continue
