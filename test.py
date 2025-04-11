@@ -41,9 +41,6 @@ for _, row in filtered_df.iterrows():
         )
     )
 
-# start = int(input("측점 시작값 입력: "))
-# end   = int(input("측점 끝값 입력: "))
-
 
 for i in rawPoints.points:
     print(f"{rawPoints.points.index(i)+1}번째 포인트:")
