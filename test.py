@@ -14,10 +14,13 @@ with open(pointread_path, "w", encoding="utf-8") as f:
 # 저장된 경로 import
 if temp_dir not in sys.path:
     sys.path.append(temp_dir)
+'''
+# 매번 새로 불러오기가 가능해야하지만 노드연결을 연결해제후 재연결해야만함.
 
 import importlib
 import pointRead
-importlib.reload(pointRead)  # 매번 새로 불러오기
+importlib.reload(pointRead)  
+'''
 
 # pointRead에서 불러오기
 from pointRead import *
@@ -41,32 +44,12 @@ for _, row in filtered_df.iterrows():
         )
     )
 
-
-for i in rawPoints.points:
-    print(f"{rawPoints.points.index(i)+1}번째 포인트:")
-    print(i)
-    print()
-
-print("---------------------------------------")
-print("상대좌표로 변경")
-print("---------------------------------------")
-
-# absToRel(newPointList)
-print("함수호출")
 rawPoints.to_rel()
-
-
 start = IN[2]
 end = IN[3]
 
-rawPoints.points_slide(start,end)
+linear_point = rawPoints.points_slide(start,end)
 
+linear_point = linear_point.to_dynamo_points()
 
-OUT = rawPoints.to_dynamo_points()
-# OUT = rawPoints.to_dynamo_points()
-
-
-
-# print("Linear Points:", linear)
-# print("Types:", [type(p) for p in linear])
-# OUT = PolyCurve.ByPoints(linear,False)
+OUT = PolyCurve.ByPoints(linear_point)

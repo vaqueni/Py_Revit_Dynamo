@@ -155,7 +155,7 @@
       "Inputs": [],
       "Outputs": [
         {
-          "Id": "98315598d813455ab7d2deedb5d98eba",
+          "Id": "5fea0ae9caec4474a7f8cf20679b1cb6",
           "Name": "",
           "Description": "Value of expression at line 1",
           "UsingDefaultValue": false,
@@ -164,7 +164,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "e6b43f8a1ba9464fb22dadcb7b27f674",
+          "Id": "958118bc58524f16a428cecc720da594",
           "Name": "",
           "Description": "Value of expression at line 2",
           "UsingDefaultValue": false,
@@ -175,43 +175,12 @@
       ],
       "Replication": "Disabled",
       "Description": "Allows for DesignScript code to be authored directly",
-      "Code": "30;\n150;"
+      "Code": "-1;\n200;"
     },
     {
       "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
-      "WatchWidth": 50.0,
+      "WatchWidth": 245.0,
       "WatchHeight": 38.0,
-      "Id": "097646d97961422cb91f6aba0575cb55",
-      "NodeType": "ExtensionNode",
-      "Inputs": [
-        {
-          "Id": "0014511469f54241a684ea7c3a84c078",
-          "Name": "",
-          "Description": "Node to show output from",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Outputs": [
-        {
-          "Id": "75080f0d7de840acac7c940ac268132d",
-          "Name": "",
-          "Description": "Node output",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Replication": "Disabled",
-      "Description": "Visualizes a node's output"
-    },
-    {
-      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
-      "WatchWidth": 200.0,
-      "WatchHeight": 200.0,
       "Id": "0c7179840dea4f57aa8ebcf8d680b6c5",
       "NodeType": "ExtensionNode",
       "Inputs": [
@@ -289,6 +258,114 @@
       "FunctionSignature": "DSCore.IO.FileSystem.ReadText@var",
       "Replication": "Auto",
       "Description": "Reads a text file and returns the contents as a string.\n\nFileSystem.ReadText (file: var): string"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "fe9f70902ad64ab58ed87834bae07745",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "bcccbfa427814974a3e68ea2c1be16f5",
+          "Name": "points",
+          "Description": "Points to make polycurve\n\nPoint[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8aa5877683ab4881907a92b465822837",
+          "Name": "connectLastToFirst",
+          "Description": "True to connect last point to first point, false to leave open\n\nbool\nDefault value : false",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "6ab7d32aaa9c48bd9b32fbbc0751c456",
+          "Name": "PolyCurve",
+          "Description": "Polycurve created by points",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.PolyCurve.ByPoints@Autodesk.DesignScript.Geometry.Point[],bool",
+      "Replication": "Auto",
+      "Description": "Make PolyCurve by connecting points. Set the 'connectLastToFirst' input to true to close the PolyCurve.\n\nPolyCurve.ByPoints (points: Point[], connectLastToFirst: bool = false): PolyCurve"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "a08569b192f74bb598de5aa9fbd23e29",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "b0dd5643e4e94e4cafad4f82edb39f53",
+          "Name": "points",
+          "Description": "Points to make polycurve\n\nPoint[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2697d8636f2544ef92eef312db85c702",
+          "Name": "connectLastToFirst",
+          "Description": "True to connect last point to first point, false to leave open\n\nbool\nDefault value : false",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "cca479747ca74f07a0a5abb6fbbdbec9",
+          "Name": "PolyCurve",
+          "Description": "Polycurve created by points",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.PolyCurve.ByPoints@Autodesk.DesignScript.Geometry.Point[],bool",
+      "Replication": "Auto",
+      "Description": "Make PolyCurve by connecting points. Set the 'connectLastToFirst' input to true to close the PolyCurve.\n\nPolyCurve.ByPoints (points: Point[], connectLastToFirst: bool = false): PolyCurve"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "b013edf597e04dd498231d59cd08c148",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "5ddfcdecf5604dac9d94c7f6ebe1fafa",
+          "Name": "object",
+          "Description": "Object to query type\n\nvar",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "708c016a7c3742f584cab68aeadb9075",
+          "Name": "string",
+          "Description": "Type of object.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DSCore.Object.Type@var",
+      "Replication": "Auto",
+      "Description": "Returns the type of object represented as string.\n\nObject.Type (object: var): string"
     }
   ],
   "Connectors": [
@@ -300,12 +377,6 @@
     },
     {
       "Start": "95cda5154e9741cd9fd9e7f7181ee93b",
-      "End": "0014511469f54241a684ea7c3a84c078",
-      "Id": "0359bc5d207b408392607c5e4d2729ae",
-      "IsHidden": "False"
-    },
-    {
-      "Start": "95cda5154e9741cd9fd9e7f7181ee93b",
       "End": "81919db20824416eb2c90f6b3160695e",
       "Id": "e79e9d019aed4371959a4beda159b959",
       "IsHidden": "False"
@@ -313,7 +384,7 @@
     {
       "Start": "1c619cb5817b470cac74925c5006cc02",
       "End": "afc556fb5521403ba172dad18ba42b57",
-      "Id": "bae79dbf127b4a90a1d320b222b70151",
+      "Id": "7d205eca215f4d7386a0ded46a1af1e8",
       "IsHidden": "False"
     },
     {
@@ -323,21 +394,33 @@
       "IsHidden": "False"
     },
     {
-      "Start": "98315598d813455ab7d2deedb5d98eba",
+      "Start": "5fea0ae9caec4474a7f8cf20679b1cb6",
       "End": "4e5d59ff53f641bcb1e245fc7c5c7b51",
-      "Id": "2b5178f289044da6816110ad2ad916f4",
+      "Id": "65a5ea71d310489eb821bcf00c3a6ba7",
       "IsHidden": "False"
     },
     {
-      "Start": "e6b43f8a1ba9464fb22dadcb7b27f674",
+      "Start": "958118bc58524f16a428cecc720da594",
       "End": "658faf16eb504e0a848e2965b040b603",
-      "Id": "bfd8454364ce4f36b24bf452b5a89eaf",
+      "Id": "213b007b8bc5481195802ff8657660e5",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "1f21aee52f784932acaffbe920e9fc79",
+      "End": "b0dd5643e4e94e4cafad4f82edb39f53",
+      "Id": "9a6c9459e5cc486bb52c179b3da0393c",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "1f21aee52f784932acaffbe920e9fc79",
+      "End": "5ddfcdecf5604dac9d94c7f6ebe1fafa",
+      "Id": "9e4df930223f483abfad6ba33453212f",
       "IsHidden": "False"
     },
     {
       "Start": "0f6d606e8b784f03a15dcef30cb53119",
       "End": "c920c0a5973f473ebd0d0229debff21d",
-      "Id": "231c9d19bd084dcbb1086435dadd56f0",
+      "Id": "8389bb96fcf643ac9de2db3e343f095d",
       "IsHidden": "False"
     },
     {
@@ -426,8 +509,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 244.04054393109288,
-        "Y": -49.71778428630989
+        "X": 105.30833960514735,
+        "Y": -30.269344427532474
       },
       {
         "Id": "ff7901554a954949866e7162ddb91f74",
@@ -456,8 +539,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": -101.44078351448388,
-        "Y": 464.005820453493
+        "X": -450.21613831522575,
+        "Y": 333.05299207105827
       },
       {
         "Id": "70275ba322d0462f96c09fdcda6237a2",
@@ -468,16 +551,6 @@
         "ShowGeometry": true,
         "X": 460.2740453092265,
         "Y": 580.7009971781579
-      },
-      {
-        "Id": "097646d97961422cb91f6aba0575cb55",
-        "Name": "Watch",
-        "IsSetAsInput": false,
-        "IsSetAsOutput": false,
-        "Excluded": false,
-        "ShowGeometry": true,
-        "X": 1477.2113142871688,
-        "Y": 458.6187992473973
       },
       {
         "Id": "0c7179840dea4f57aa8ebcf8d680b6c5",
@@ -496,8 +569,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": -631.765662741489,
-        "Y": 287.49130940447293
+        "X": -476.1781438712695,
+        "Y": 130.6072278770016
       },
       {
         "Id": "16f738ff9f5c41e7b494a9a72f7c6e8c",
@@ -508,11 +581,41 @@
         "ShowGeometry": true,
         "X": 22.800457647609505,
         "Y": 303.0809547250916
+      },
+      {
+        "Id": "fe9f70902ad64ab58ed87834bae07745",
+        "Name": "PolyCurve.ByPoints",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1227.5111787603598,
+        "Y": 148.68780274080777
+      },
+      {
+        "Id": "a08569b192f74bb598de5aa9fbd23e29",
+        "Name": "PolyCurve.ByPoints",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1979.53773596667,
+        "Y": 651.9698063215512
+      },
+      {
+        "Id": "b013edf597e04dd498231d59cd08c148",
+        "Name": "Object.Type",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1737.2268876912833,
+        "Y": 705.385365104973
       }
     ],
     "Annotations": [],
-    "X": -311.7513985066837,
-    "Y": 55.54150979342069,
-    "Zoom": 1.0195401924157952
+    "X": 158.3685126740139,
+    "Y": 275.46499413856975,
+    "Zoom": 0.7999793193991842
   }
 }

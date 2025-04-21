@@ -1,6 +1,6 @@
 import clr
 clr.AddReference('ProtoGeometry')
-from Autodesk.DesignScript.Geometry import Point, PolyCurve
+from Autodesk.DesignScript.Geometry import *
 
 class LinPoint:
     def __init__(self, lin='', x=0, y=0, z=0):
@@ -32,24 +32,23 @@ class PointArray:
     # 시작점과 끝점을 입력하면 해당 값에서 슬라이스된 array를 출력
     # start에 -1 입력시 처음부터, end = -1 면 끝까지
     def points_slide(self, start, end):
-        returnList = []
+        returnArray = PointArray()
         if end == -1:
             for i in self.points:
                 if start<=i.lin:
-                    returnList.append(i)
+                    returnArray.add_point(i)
                 else: continue
-            return returnList
+            return returnArray
 
         for i in self.points:
             if i.lin<start:
                 continue
             elif start<=i.lin<=end:
                 print(i)
-                returnList.append(i)
+                returnArray.add_point(i)
             else:
                 continue
-        self.points = returnList
-        return self
+        return returnArray
     # 절대좌표값을 첫번째 인수를 기준으로 상대 좌표롤 만듬 
     def to_rel(self):
         ox = self.points[0].x
