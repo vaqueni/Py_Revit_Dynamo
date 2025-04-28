@@ -1,0 +1,599 @@
+{
+  "Uuid": "c4de4aa9-dc6d-4654-aa4a-73823ed8473d",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "section3",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "43033a259a864ce7bf12a4b852da53ef",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "c73d60a5a45b4b31a4a9ba86ac3b509f",
+          "Name": "file",
+          "Description": "File object to read text from\n\nvar",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "17b9e4cccd5e4ef08a03b8056941e367",
+          "Name": "string",
+          "Description": "Contents of the text file.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DSCore.IO.FileSystem.ReadText@var",
+      "Replication": "Auto",
+      "Description": "Reads a text file and returns the contents as a string.\n\nFileSystem.ReadText (file: var): string"
+    },
+    {
+      "ConcreteType": "PythonNodeModels.PythonStringNode, PythonNodeModels",
+      "Engine": "CPython3",
+      "VariableInputPorts": true,
+      "Id": "7c4cafe5b2224781a40ca262fb36b35a",
+      "NodeType": "ExtensionNode",
+      "Inputs": [
+        {
+          "Id": "9baeb37fb137453f85a84d1b6931706e",
+          "Name": "script",
+          "Description": "Python script to run.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "63caf24703654177abbb42ebe658a8ba",
+          "Name": "IN[0]",
+          "Description": "Input #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "60a0d003d3b14f2894eb46818fd9b153",
+          "Name": "IN[1]",
+          "Description": "Input #1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a8bf88fba7e34693bd975ea9dc3b5cab",
+          "Name": "IN[2]",
+          "Description": "Input #2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7f10de427d154a1d94e1fbec65130a99",
+          "Name": "IN[3]",
+          "Description": "Input #3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "98850cfb321e4a06a4f8d14a19565c6b",
+          "Name": "OUT",
+          "Description": "Result of the python script",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Runs a Python script from a string."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.Filename, CoreNodeModels",
+      "Id": "3e1385c11307460a9d332ccdf924f776",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "91f0c3a5843a4ad195ed32344c2e2ff0",
+          "Name": "",
+          "Description": "File Path",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows you to select a file on the system and returns its file path",
+      "HintPath": "C:\\Users\\user\\Desktop\\개인 제출용 서류\\공부\\새 폴더\\Py_Revit_Dynamo\\test.py",
+      "InputValue": "개인 제출용 서류\\공부\\새 폴더\\Py_Revit_Dynamo\\test.py"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.Filename, CoreNodeModels",
+      "Id": "fa3120ca6a85437d9ba92b561e845966",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "2cdede82a2164583b9ebdd182b7ad2b3",
+          "Name": "",
+          "Description": "File Path",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows you to select a file on the system and returns its file path",
+      "HintPath": "C:\\Users\\user\\Desktop\\개인 제출용 서류\\공부\\새 폴더\\Py_Revit_Dynamo\\data\\Civil Report.csv",
+      "InputValue": "C:\\Users\\user\\Desktop\\개인 제출용 서류\\공부\\새 폴더\\Py_Revit_Dynamo\\data\\Civil Report.csv"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "Id": "177a8572b90a40838703094017556389",
+      "NodeType": "CodeBlockNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "67add87ddd284be4a9fee58f227c455b",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "4e142e7bb3d44f12812e25d2dfb594da",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly",
+      "Code": "-1;\n200;"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "WatchWidth": 245.0,
+      "WatchHeight": 38.0,
+      "Id": "625869bd83bf4ed584d0fcac0eaf3287",
+      "NodeType": "ExtensionNode",
+      "Inputs": [
+        {
+          "Id": "85315090d4154cd19504cb40c92bfafe",
+          "Name": "",
+          "Description": "Node to show output from",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "66dc1d76c5ed41908d0819c625f3d0bd",
+          "Name": "",
+          "Description": "Node output",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualizes a node's output"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.Filename, CoreNodeModels",
+      "Id": "ef1b475457004611ab2dff072de41429",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "5b6987b9ce734c7fb42fd3ba2ec58311",
+          "Name": "",
+          "Description": "File Path",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows you to select a file on the system and returns its file path",
+      "HintPath": "C:\\Users\\user\\Desktop\\개인 제출용 서류\\공부\\새 폴더\\Py_Revit_Dynamo\\pointRead.py",
+      "InputValue": "개인 제출용 서류\\공부\\새 폴더\\Py_Revit_Dynamo\\pointRead.py"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "ec2dcd9b9dda43778223d7debb39bbb8",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "a61e6af102504ccb83b348ab033939f4",
+          "Name": "file",
+          "Description": "File object to read text from\n\nvar",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "accfb7164c8b4201b69b46c27eeef13a",
+          "Name": "string",
+          "Description": "Contents of the text file.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DSCore.IO.FileSystem.ReadText@var",
+      "Replication": "Auto",
+      "Description": "Reads a text file and returns the contents as a string.\n\nFileSystem.ReadText (file: var): string"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "8011a8dd7f074a81943aaee7089be937",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "3e7b124f967f453a83333f56dbc01f22",
+          "Name": "points",
+          "Description": "Points to make polycurve\n\nPoint[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8ff238e5cca7461daff6262695447daf",
+          "Name": "connectLastToFirst",
+          "Description": "True to connect last point to first point, false to leave open\n\nbool\nDefault value : false",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "c91001b2f26b4a569bf806893f06f2b6",
+          "Name": "PolyCurve",
+          "Description": "Polycurve created by points",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.PolyCurve.ByPoints@Autodesk.DesignScript.Geometry.Point[],bool",
+      "Replication": "Auto",
+      "Description": "Make PolyCurve by connecting points. Set the 'connectLastToFirst' input to true to close the PolyCurve.\n\nPolyCurve.ByPoints (points: Point[], connectLastToFirst: bool = false): PolyCurve"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "c100ffaf90b04c11acd52a84a5daa5be",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "b13a9bb5ef0248e281469c076759c5c1",
+          "Name": "points",
+          "Description": "Points to make polycurve\n\nPoint[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "165bef2727564fac88d425f580bfe3e5",
+          "Name": "connectLastToFirst",
+          "Description": "True to connect last point to first point, false to leave open\n\nbool\nDefault value : false",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "1918bffba98f4ee89519507676646d4b",
+          "Name": "PolyCurve",
+          "Description": "Polycurve created by points",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.PolyCurve.ByPoints@Autodesk.DesignScript.Geometry.Point[],bool",
+      "Replication": "Auto",
+      "Description": "Make PolyCurve by connecting points. Set the 'connectLastToFirst' input to true to close the PolyCurve.\n\nPolyCurve.ByPoints (points: Point[], connectLastToFirst: bool = false): PolyCurve"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "f1bbadcc2fea402daec8bfa419afc225",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "eccb5dad351b4fd0b9430941dd733545",
+          "Name": "object",
+          "Description": "Object to query type\n\nvar",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "a2ca9d0abb7148deaf718d96e643e9cc",
+          "Name": "string",
+          "Description": "Type of object.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DSCore.Object.Type@var",
+      "Replication": "Auto",
+      "Description": "Returns the type of object represented as string.\n\nObject.Type (object: var): string"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "17b9e4cccd5e4ef08a03b8056941e367",
+      "End": "9baeb37fb137453f85a84d1b6931706e",
+      "Id": "0de98cc0a4da43edab812aada67ef1cc",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "98850cfb321e4a06a4f8d14a19565c6b",
+      "End": "85315090d4154cd19504cb40c92bfafe",
+      "Id": "024a003d90a2456e96f3713071b04fce",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "91f0c3a5843a4ad195ed32344c2e2ff0",
+      "End": "c73d60a5a45b4b31a4a9ba86ac3b509f",
+      "Id": "49de411981a341b1acfeb7c9ebcba389",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "2cdede82a2164583b9ebdd182b7ad2b3",
+      "End": "60a0d003d3b14f2894eb46818fd9b153",
+      "Id": "54f04f22c2354d6e801262ad418ddb69",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "67add87ddd284be4a9fee58f227c455b",
+      "End": "a8bf88fba7e34693bd975ea9dc3b5cab",
+      "Id": "482736e8e6664f95847e33dc35eb78a2",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "4e142e7bb3d44f12812e25d2dfb594da",
+      "End": "7f10de427d154a1d94e1fbec65130a99",
+      "Id": "91e06aeb45794c9d9b30d9d7fdb240e7",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "66dc1d76c5ed41908d0819c625f3d0bd",
+      "End": "b13a9bb5ef0248e281469c076759c5c1",
+      "Id": "dd42bfb59deb4c559a45a0850315aa5f",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "66dc1d76c5ed41908d0819c625f3d0bd",
+      "End": "eccb5dad351b4fd0b9430941dd733545",
+      "Id": "1fa09591a37f4e88bb5a24cbbe90c71f",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "5b6987b9ce734c7fb42fd3ba2ec58311",
+      "End": "a61e6af102504ccb83b348ab033939f4",
+      "Id": "f9ac7172c1744bffa4fc08a4d5204f28",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "accfb7164c8b4201b69b46c27eeef13a",
+      "End": "63caf24703654177abbb42ebe658a8ba",
+      "Id": "1e90099b0a6f462e8f56abf781b1f876",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "EnableLegacyPolyCurveBehavior": true,
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "3.3",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "8.2",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "3.3.0.6316",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "_Background Preview",
+      "EyeX": 106.54483795166016,
+      "EyeY": 71.18113708496094,
+      "EyeZ": 162.72560119628906,
+      "LookX": 0.6522064208984375,
+      "LookY": -29.077770233154297,
+      "LookZ": -197.4231414794922,
+      "UpX": -0.0002295579615747556,
+      "UpY": 0.9975641369819641,
+      "UpZ": 0.0697556883096695
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Id": "43033a259a864ce7bf12a4b852da53ef",
+        "Name": "FileSystem.ReadText",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 105.30833960514735,
+        "Y": -30.269344427532474
+      },
+      {
+        "Id": "7c4cafe5b2224781a40ca262fb36b35a",
+        "Name": "Python Script From String",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 872.1373177625684,
+        "Y": 215.982937694497
+      },
+      {
+        "Id": "3e1385c11307460a9d332ccdf924f776",
+        "Name": "File Path",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -449.05556054330407,
+        "Y": -53.2978852694298
+      },
+      {
+        "Id": "fa3120ca6a85437d9ba92b561e845966",
+        "Name": "csv 파일",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -450.21613831522575,
+        "Y": 333.05299207105827
+      },
+      {
+        "Id": "177a8572b90a40838703094017556389",
+        "Name": "Code Block",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 460.2740453092265,
+        "Y": 580.7009971781579
+      },
+      {
+        "Id": "625869bd83bf4ed584d0fcac0eaf3287",
+        "Name": "Watch",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1276.8896603850221,
+        "Y": 553.0989533006361
+      },
+      {
+        "Id": "ef1b475457004611ab2dff072de41429",
+        "Name": "File Path",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -476.1781438712695,
+        "Y": 130.6072278770016
+      },
+      {
+        "Id": "ec2dcd9b9dda43778223d7debb39bbb8",
+        "Name": "FileSystem.ReadText",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 22.800457647609505,
+        "Y": 303.0809547250916
+      },
+      {
+        "Id": "8011a8dd7f074a81943aaee7089be937",
+        "Name": "PolyCurve.ByPoints",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1227.5111787603598,
+        "Y": 148.68780274080777
+      },
+      {
+        "Id": "c100ffaf90b04c11acd52a84a5daa5be",
+        "Name": "PolyCurve.ByPoints",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1979.53773596667,
+        "Y": 651.9698063215512
+      },
+      {
+        "Id": "f1bbadcc2fea402daec8bfa419afc225",
+        "Name": "Object.Type",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1737.2268876912833,
+        "Y": 705.385365104973
+      }
+    ],
+    "Annotations": [],
+    "X": 158.3685126740139,
+    "Y": 275.46499413856975,
+    "Zoom": 0.7999793193991842
+  }
+}
