@@ -44,11 +44,12 @@ class PointArray:
             if i.lin<start:
                 continue
             elif start<=i.lin<=end:
-                print(i)
+                # print(i)
                 returnArray.add_point(i)
             else:
                 continue
         return returnArray
+    
     # 절대좌표값을 첫번째 인수를 기준으로 상대 좌표롤 만듬 
     def to_rel(self):
         ox = self.points[0].x
@@ -58,6 +59,14 @@ class PointArray:
             p.x = p.x - ox
             p.y = p.y - oy
             p.z = p.z - oz
+
+    def toMM(self):
+        for p in self.points:
+            p.x = p.x * 1000
+            p.y = p.y * 1000
+            p.z = p.z * 1000
+        print("실행됨")
+
     # 다이나모 Point 객체로 변경
     def to_dynamo_points(self):
         return [Point.ByCoordinates(p.x, p.y, p.z) for p in self.points]
