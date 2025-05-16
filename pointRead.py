@@ -65,7 +65,7 @@ class PointArray:
             p.x = p.x * 1000
             p.y = p.y * 1000
             p.z = p.z * 1000
-        print("실행됨")
+        # print("실행됨")
 
     # 다이나모 Point 객체로 변경
     def to_dynamo_points(self):

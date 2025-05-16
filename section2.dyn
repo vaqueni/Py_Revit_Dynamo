@@ -17,7 +17,7 @@
         {
           "Id": "c73d60a5a45b4b31a4a9ba86ac3b509f",
           "Name": "file",
-          "Description": "문자를 읽을 파일 객체\n\nvar",
+          "Description": "File object to read text from\n\nvar",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -28,7 +28,7 @@
         {
           "Id": "17b9e4cccd5e4ef08a03b8056941e367",
           "Name": "string",
-          "Description": "텍스트 파일 내용.",
+          "Description": "Contents of the text file.",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -37,7 +37,7 @@
       ],
       "FunctionSignature": "DSCore.IO.FileSystem.ReadText@var",
       "Replication": "Auto",
-      "Description": "텍스트 파일을 읽고 내용을 문자열로 반환합니다.\n\nFileSystem.ReadText (file: var): string"
+      "Description": "Reads a text file and returns the contents as a string.\n\nFileSystem.ReadText (file: var): string"
     },
     {
       "ConcreteType": "PythonNodeModels.PythonStringNode, PythonNodeModels",
@@ -260,7 +260,7 @@
         {
           "Id": "a61e6af102504ccb83b348ab033939f4",
           "Name": "file",
-          "Description": "문자를 읽을 파일 객체\n\nvar",
+          "Description": "File object to read text from\n\nvar",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -271,7 +271,7 @@
         {
           "Id": "accfb7164c8b4201b69b46c27eeef13a",
           "Name": "string",
-          "Description": "텍스트 파일 내용.",
+          "Description": "Contents of the text file.",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -280,76 +280,7 @@
       ],
       "FunctionSignature": "DSCore.IO.FileSystem.ReadText@var",
       "Replication": "Auto",
-      "Description": "텍스트 파일을 읽고 내용을 문자열로 반환합니다.\n\nFileSystem.ReadText (file: var): string"
-    },
-    {
-      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
-      "Id": "c100ffaf90b04c11acd52a84a5daa5be",
-      "NodeType": "FunctionNode",
-      "Inputs": [
-        {
-          "Id": "b13a9bb5ef0248e281469c076759c5c1",
-          "Name": "points",
-          "Description": "PolyCurve를 만들 점\n\nPoint[]",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "165bef2727564fac88d425f580bfe3e5",
-          "Name": "connectLastToFirst",
-          "Description": "마지막 점을 첫 번째 점을 연결하려면 True, 열린 상태로 유지하려면 false\n\nbool\nDefault value : false",
-          "UsingDefaultValue": true,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Outputs": [
-        {
-          "Id": "1918bffba98f4ee89519507676646d4b",
-          "Name": "PolyCurve",
-          "Description": "점으로 작성된 Polycurve",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "FunctionSignature": "Autodesk.DesignScript.Geometry.PolyCurve.ByPoints@Autodesk.DesignScript.Geometry.Point[],bool",
-      "Replication": "Auto",
-      "Description": "점을 연결하여 PolyCurve를 만듭니다. 'connectLastToFirst' 입력을 True로 설정하고 PolyCurve를 닫습니다.\n\nPolyCurve.ByPoints (points: Point[], connectLastToFirst: bool = false): PolyCurve"
-    },
-    {
-      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
-      "Id": "f1bbadcc2fea402daec8bfa419afc225",
-      "NodeType": "FunctionNode",
-      "Inputs": [
-        {
-          "Id": "eccb5dad351b4fd0b9430941dd733545",
-          "Name": "object",
-          "Description": "유형을 조회할 객체\n\nvar",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Outputs": [
-        {
-          "Id": "a2ca9d0abb7148deaf718d96e643e9cc",
-          "Name": "string",
-          "Description": "객체 유형.",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "FunctionSignature": "DSCore.Object.Type@var",
-      "Replication": "Auto",
-      "Description": "문자열로 표현된 객체 유형을 반환합니다.\n\nObject.Type (object: var): string"
+      "Description": "Reads a text file and returns the contents as a string.\n\nFileSystem.ReadText (file: var): string"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
@@ -475,13 +406,13 @@
       "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
       "WatchWidth": 200.0,
       "WatchHeight": 200.0,
-      "Id": "0df53057696f49c9adfc46726699e228",
+      "Id": "bd7295df505141eaa995a3ac0fd3c9ea",
       "NodeType": "ExtensionNode",
       "Inputs": [
         {
-          "Id": "68690f18b9854b3d8e2b4f28c222cb1d",
+          "Id": "1f3c32be23474ad5b4deab78150673bf",
           "Name": "",
-          "Description": "출력을 표시할 노드",
+          "Description": "Node to show output from",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -490,9 +421,9 @@
       ],
       "Outputs": [
         {
-          "Id": "6ab950a0fc3a4c69a0f5cde9292d0350",
+          "Id": "61dce03ef8114006b7842053171f9e2d",
           "Name": "",
-          "Description": "노드 출력",
+          "Description": "Node output",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -501,36 +432,6 @@
       ],
       "Replication": "Disabled",
       "Description": "Visualizes a node's output"
-    },
-    {
-      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
-      "Id": "7a7d389abc8642da8d233dddeace281d",
-      "NodeType": "CodeBlockNode",
-      "Inputs": [
-        {
-          "Id": "15991317cd9c42d89fb9472c183b81aa",
-          "Name": "i",
-          "Description": "i",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Outputs": [
-        {
-          "Id": "a9a2a5343825453dadc6ca4ff1c554fa",
-          "Name": "",
-          "Description": "Value of expression at line 1",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Replication": "Disabled",
-      "Description": "Allows for DesignScript code to be authored directly",
-      "Code": "i[3];"
     }
   ],
   "Connectors": [
@@ -542,14 +443,14 @@
     },
     {
       "Start": "98850cfb321e4a06a4f8d14a19565c6b",
-      "End": "68690f18b9854b3d8e2b4f28c222cb1d",
-      "Id": "c60b0c53c95b4d928495eef3a8af903e",
+      "End": "1f3c32be23474ad5b4deab78150673bf",
+      "Id": "e532e72cfa794f86b99429b74b46b981",
       "IsHidden": "False"
     },
     {
       "Start": "91f0c3a5843a4ad195ed32344c2e2ff0",
       "End": "c73d60a5a45b4b31a4a9ba86ac3b509f",
-      "Id": "15bcb4254a6e485982a331b218099737",
+      "Id": "5e2f744c86b34f0f956adb58034417aa",
       "IsHidden": "False"
     },
     {
@@ -573,7 +474,7 @@
     {
       "Start": "5b6987b9ce734c7fb42fd3ba2ec58311",
       "End": "a61e6af102504ccb83b348ab033939f4",
-      "Id": "98a8dd6c78644b2796844d879e7dd326",
+      "Id": "ce4dc2145fd747e4b2c68b6759bfa656",
       "IsHidden": "False"
     },
     {
@@ -616,12 +517,6 @@
       "Start": "c1db579a29f94465871e27e6b6cd01f6",
       "End": "deddd39c62924c62bb0faeff8a1e7578",
       "Id": "89535d40a79b4aa1bc59d5b3a1dc82e2",
-      "IsHidden": "False"
-    },
-    {
-      "Start": "6ab950a0fc3a4c69a0f5cde9292d0350",
-      "End": "15991317cd9c42d89fb9472c183b81aa",
-      "Id": "9916c5a6609448e18d0f99ec7d5ee45b",
       "IsHidden": "False"
     }
   ],
@@ -685,15 +580,15 @@
     },
     "Camera": {
       "Name": "_Background Preview",
-      "EyeX": 43071.8828125,
-      "EyeY": 29827.55078125,
-      "EyeZ": -3638.428466796875,
-      "LookX": 14.66015625,
-      "LookY": -6.681640625,
-      "LookZ": 1.590576171875,
-      "UpX": 0.4103600084781647,
-      "UpY": 0.9108371138572693,
-      "UpZ": 0.04450349509716034
+      "EyeX": 41591.16015625,
+      "EyeY": 8873.19921875,
+      "EyeZ": 3255.8494415283203,
+      "LookX": 40390.64453125,
+      "LookY": -21164.42578125,
+      "LookZ": -6263.97119140625,
+      "UpX": 0.45444393157958984,
+      "UpY": 0.8880135416984558,
+      "UpZ": -0.07008983194828033
     },
     "ConnectorPins": [],
     "NodeViews": [
@@ -704,8 +599,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": -211.17189662629346,
-        "Y": -45.03391401724588
+        "X": -232.4169233583624,
+        "Y": -80.38510693233832
       },
       {
         "Id": "7c4cafe5b2224781a40ca262fb36b35a",
@@ -714,8 +609,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 872.1373177625684,
-        "Y": 215.982937694497
+        "X": 1019.0258382483025,
+        "Y": 438.3720175306038
       },
       {
         "Id": "3e1385c11307460a9d332ccdf924f776",
@@ -724,8 +619,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": -449.05556054330407,
-        "Y": -53.2978852694298
+        "X": -454.7657746168063,
+        "Y": -98.84506265742391
       },
       {
         "Id": "fa3120ca6a85437d9ba92b561e845966",
@@ -744,8 +639,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 460.2740453092265,
-        "Y": 580.7009971781579
+        "X": -70.81231467722318,
+        "Y": 728.1760071254664
       },
       {
         "Id": "ef1b475457004611ab2dff072de41429",
@@ -754,8 +649,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": -476.1781438712695,
-        "Y": 130.6072278770016
+        "X": -401.79671025749906,
+        "Y": 135.144920490765
       },
       {
         "Id": "ec2dcd9b9dda43778223d7debb39bbb8",
@@ -764,28 +659,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": -253.73846211050284,
+        "X": -211.17189662629346,
         "Y": 127.56547797824538
-      },
-      {
-        "Id": "c100ffaf90b04c11acd52a84a5daa5be",
-        "Name": "PolyCurve.ByPoints",
-        "IsSetAsInput": false,
-        "IsSetAsOutput": false,
-        "Excluded": false,
-        "ShowGeometry": true,
-        "X": 1979.53773596667,
-        "Y": 651.9698063215512
-      },
-      {
-        "Id": "f1bbadcc2fea402daec8bfa419afc225",
-        "Name": "Object.Type",
-        "IsSetAsInput": false,
-        "IsSetAsOutput": false,
-        "Excluded": false,
-        "ShowGeometry": true,
-        "X": 1737.2268876912833,
-        "Y": 705.385365104973
       },
       {
         "Id": "40a0d36725714186baa318eac0a40e72",
@@ -794,8 +669,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 439.67447709311523,
-        "Y": 796.2742597734655
+        "X": -63.812314677223185,
+        "Y": 889.5352799750129
       },
       {
         "Id": "69b0d95f5e7a4df0828d9fcf2a95b2fe",
@@ -804,8 +679,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 489.52554706089643,
-        "Y": 933.6196958314075
+        "X": -99.81231467722318,
+        "Y": 1040.8945528245595
       },
       {
         "Id": "384a33de580d4c1c8b3387a0a087fcb2",
@@ -814,8 +689,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 512.5568847260266,
-        "Y": 1246.7843452504185
+        "X": -63.812314677223185,
+        "Y": 1343.6130985236523
       },
       {
         "Id": "6999f2d0b0524916975dcd6e62ad6b36",
@@ -824,8 +699,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 489.3227180492113,
-        "Y": 1114.4984947596117
+        "X": -103.81231467722318,
+        "Y": 1192.2538256741059
       },
       {
         "Id": "0d4162a4cc13403387cce8ce5b798428",
@@ -834,8 +709,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 511.1758015662049,
-        "Y": 1416.0307320369943
+        "X": -72.81231467722318,
+        "Y": 1494.9723713731987
       },
       {
         "Id": "08fef5d9c5ac48f1995eb409dac86414",
@@ -844,33 +719,23 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 550.8634443073531,
-        "Y": 1569.1908697887689
+        "X": -36.812314677223185,
+        "Y": 1646.3316442227451
       },
       {
-        "Id": "0df53057696f49c9adfc46726699e228",
+        "Id": "bd7295df505141eaa995a3ac0fd3c9ea",
         "Name": "Watch",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 1294.031953630707,
-        "Y": 406.6237475144105
-      },
-      {
-        "Id": "7a7d389abc8642da8d233dddeace281d",
-        "Name": "Code Block",
-        "IsSetAsInput": false,
-        "IsSetAsOutput": false,
-        "Excluded": false,
-        "ShowGeometry": true,
-        "X": 2071.0,
-        "Y": 259.0
+        "X": 1922.7456133163187,
+        "Y": 228.34327931222788
       }
     ],
     "Annotations": [],
-    "X": 398.6242053454629,
-    "Y": 310.3535604053205,
-    "Zoom": 0.39850200878874564
+    "X": -0.3912161199281172,
+    "Y": 209.68869017718595,
+    "Zoom": 0.44693891712849565
   }
 }
