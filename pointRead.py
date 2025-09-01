@@ -1,6 +1,6 @@
 import clr
 clr.AddReference('ProtoGeometry')
-from Autodesk.DesignScript.Geometry import Point
+from Autodesk.DesignScript.Geometry import *
 
 class LinPoint:
     def __init__(self, lin='', x=0, y=0, z=0):
@@ -32,24 +32,24 @@ class PointArray:
     # 시작점과 끝점을 입력하면 해당 값에서 슬라이스된 array를 출력
     # start에 -1 입력시 처음부터, end = -1 면 끝까지
     def points_slide(self, start, end):
-        returnList = []
+        returnArray = PointArray()
         if end == -1:
             for i in self.points:
                 if start<=i.lin:
-                    returnList.append(i)
+                    returnArray.add_point(i)
                 else: continue
-            return returnList
+            return returnArray
 
         for i in self.points:
             if i.lin<start:
                 continue
             elif start<=i.lin<=end:
-                print(i)
-                returnList.append(i)
+                # print(i)
+                returnArray.add_point(i)
             else:
                 continue
-        self.points = returnList
-        return self
+        return returnArray
+    
     # 절대좌표값을 첫번째 인수를 기준으로 상대 좌표롤 만듬 
     def to_rel(self):
         ox = self.points[0].x
@@ -59,6 +59,14 @@ class PointArray:
             p.x = p.x - ox
             p.y = p.y - oy
             p.z = p.z - oz
+
+    def toMM(self):
+        for p in self.points:
+            p.x = p.x * 1000
+            p.y = p.y * 1000
+            p.z = p.z * 1000
+        # print("실행됨")
+
     # 다이나모 Point 객체로 변경
     def to_dynamo_points(self):
         return [Point.ByCoordinates(p.x, p.y, p.z) for p in self.points]
